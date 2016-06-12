@@ -1,0 +1,206 @@
+.wrapper {
+  overflow: hidden;
+
+  height: 100vh;
+  width: 100vw;
+
+  background: url('../images/bg.png') no-repeat center center;
+  background-size: cover;
+
+  // background: #483c6c;
+  // background: -moz-linear-gradient(45deg,  #483c6c 0%, #db8ff7 100%);
+  // background: -webkit-linear-gradient(45deg,  #483c6c 0%,#db8ff7 100%);
+  // background: linear-gradient(45deg,  #483c6c 0%,#db8ff7 100%);
+  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#483c6c', endColorstr='#db8ff7',GradientType=1 );
+}
+
+@keyframes moon {
+  0% {
+    transform: translate(0,0);
+  }
+
+  50% {
+    transform: translate(-30px, -50px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes dark {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(30px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+.parallax {
+  & > * {
+    position: absolute;
+  }
+
+  .moon {
+    width: 102px;
+    height: 102px;
+    background: url('../images/moon.png') no-repeat center center;
+    background-size: contain;
+
+    top: 15%;
+    left: 64%;
+
+    animation: moon 40s infinite linear forwards;
+  }
+
+  .yellow-planet {
+    width: 359px;
+    height: 359px;
+    background: url('../images/yellow.png') no-repeat center center;
+    background-size: contain;
+
+    top: 50%;
+    left: 15%;
+
+    animation: moon 25s infinite linear forwards;
+  }
+
+  .blue-planet {
+    width: 163px;
+    height: 163px;
+    background: url('../images/blue.png') no-repeat center center;
+    background-size: contain;
+
+    top: 40%;
+    right: 0%;
+
+    animation: dark 10s infinite linear forwards;
+  }
+
+  .dark-planet {
+    width: 75px;
+    height: 95px;
+    background: url('../images/dark.png') no-repeat center center;
+    background-size: contain;
+
+    top: 50%;
+    left: 0;
+
+    animation: dark 25s infinite linear forwards;
+  }
+
+  .stars {
+    height: 110%;
+    width: 110%;
+    background: url('../images/stars.png') no-repeat center center;
+    background-size: contain;
+
+    top: -3%;
+    left: -4%;
+
+    animation: dark 25s infinite linear forwards;
+  }
+
+  .big-stars {
+    height: 100%;
+    width: 100%;
+    background: url('../images/big-stars.png') no-repeat center center;
+    background-size: contain;
+
+    top: -10%;
+    left: 5%;
+    
+    animation: dark 25s infinite linear forwards;
+  }
+}
+
+
+.header {
+  padding: 22px 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 12px;
+
+  font-weight: bold;
+
+  .nav {
+    flex: 0 0 47%;
+    font-size: 11px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    &-item a {
+      color: #fff;
+      opacity: 0.3;
+      text-transform: uppercase;
+      transition: opacity 0.1s ease;
+      will-change: opacity;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .options {
+    flex: 0 0 54%;
+    margin-top: 4px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+  .options-left {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .button {
+    background: rgba(255,255,255,0.07);
+    padding: 6px;
+    border-radius: 150px;
+    text-align: center;
+    cursor: pointer;
+
+    color: rgba(0,0,0,0.5);
+  }
+
+  .button-inner {
+    background: #ffd388;
+    border-radius: 150px;
+    padding: 9px 0 8px;
+    width: 100px;
+  }
+
+  .free-satoshi .button-inner {
+    background: #20ffae;
+    width: 126px;
+  }
+
+  .balance {
+    color: #fff;
+    margin-right: 20px;
+  }
+
+  .free-satoshi {
+    margin-right: 10px;
+  }
+
+  .withdraw {
+    margin-top: 8px;
+  }
+}

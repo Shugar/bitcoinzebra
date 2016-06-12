@@ -1,0 +1,749 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+/*! normalize.css v2.1.2 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+/* line 11, /Users/tumasov/Developer/bitcoinzebra/app/styles/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+/* line 30, /Users/tumasov/Developer/bitcoinzebra/app/styles/_normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block; }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 41, /Users/tumasov/Developer/bitcoinzebra/app/styles/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 50, /Users/tumasov/Developer/bitcoinzebra/app/styles/_normalize.scss */
+[hidden] {
+  display: none; }
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 64, /Users/tumasov/Developer/bitcoinzebra/app/styles/_normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+/* line 74, /Users/tumasov/Developer/bitcoinzebra/app/styles/_normalize.scss */
+body {
+  margin: 0; }
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+/* line 86, /Users/tumasov/Developer/bitcoinzebra/app/styles/_normalize.scss */
+a:focus {
+  outline: thin dotted; }
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 94, /Users/tumasov/Developer/bitcoinzebra/app/styles/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 108, /Users/tumasov/Developer/bitcoinzebra/app/styles/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+/* line 117, /Users/tumasov/Developer/bitcoinzebra/app/styles/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 125, /Users/tumasov/Developer/bitcoinzebra/app/styles/_normalize.scss */
+b,
+strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+/* line 134, /Users/tumasov/Developer/bitcoinzebra/app/styles/_normalize.scss */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 142, /Users/tumasov/Developer/bitcoinzebra/app/styles/_normalize.scss */
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 152, /Users/tumasov/Developer/bitcoinzebra/app/styles/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+/* line 161, /Users/tumasov/Developer/bitcoinzebra/app/styles/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+/* line 173, /Users/tumasov/Developer/bitcoinzebra/app/styles/_normalize.scss */
+pre {
+  white-space: pre-wrap; }
+
+/**
+ * Set consistent quote types.
+ */
+/* line 181, /Users/tumasov/Developer/bitcoinzebra/app/styles/_normalize.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 189, /Users/tumasov/Developer/bitcoinzebra/app/styles/_normalize.scss */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 197, /Users/tumasov/Developer/bitcoinzebra/app/styles/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 205, /Users/tumasov/Developer/bitcoinzebra/app/styles/_normalize.scss */
+sup {
+  top: -0.5em; }
+
+/* line 209, /Users/tumasov/Developer/bitcoinzebra/app/styles/_normalize.scss */
+sub {
+  bottom: -0.25em; }
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+/* line 221, /Users/tumasov/Developer/bitcoinzebra/app/styles/_normalize.scss */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+/* line 229, /Users/tumasov/Developer/bitcoinzebra/app/styles/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+/* line 241, /Users/tumasov/Developer/bitcoinzebra/app/styles/_normalize.scss */
+figure {
+  margin: 0; }
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 253, /Users/tumasov/Developer/bitcoinzebra/app/styles/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 264, /Users/tumasov/Developer/bitcoinzebra/app/styles/_normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 275, /Users/tumasov/Developer/bitcoinzebra/app/styles/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 289, /Users/tumasov/Developer/bitcoinzebra/app/styles/_normalize.scss */
+button,
+input {
+  line-height: normal; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+/* line 301, /Users/tumasov/Developer/bitcoinzebra/app/styles/_normalize.scss */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 314, /Users/tumasov/Developer/bitcoinzebra/app/styles/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 326, /Users/tumasov/Developer/bitcoinzebra/app/styles/_normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ */
+/* line 336, /Users/tumasov/Developer/bitcoinzebra/app/styles/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 348, /Users/tumasov/Developer/bitcoinzebra/app/styles/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+/* line 360, /Users/tumasov/Developer/bitcoinzebra/app/styles/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 369, /Users/tumasov/Developer/bitcoinzebra/app/styles/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+/* line 380, /Users/tumasov/Developer/bitcoinzebra/app/styles/_normalize.scss */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */ }
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 393, /Users/tumasov/Developer/bitcoinzebra/app/styles/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 1, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+.wrapper {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  background: url("../images/bg.png") no-repeat center center;
+  background-size: cover; }
+
+@-webkit-keyframes moon {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0); }
+  50% {
+    -webkit-transform: translate(-30px, -50px);
+            transform: translate(-30px, -50px); }
+  100% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px); } }
+
+@keyframes moon {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0); }
+  50% {
+    -webkit-transform: translate(-30px, -50px);
+            transform: translate(-30px, -50px); }
+  100% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px); } }
+
+@-webkit-keyframes dark {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  50% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px); }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0); } }
+
+@keyframes dark {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  50% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px); }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0); } }
+
+/* line 46, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+.parallax > * {
+  position: absolute; }
+
+/* line 50, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+.parallax .moon {
+  width: 102px;
+  height: 102px;
+  background: url("../images/moon.png") no-repeat center center;
+  background-size: contain;
+  top: 15%;
+  left: 64%;
+  -webkit-animation: moon 40s infinite linear forwards;
+          animation: moon 40s infinite linear forwards; }
+
+/* line 62, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+.parallax .yellow-planet {
+  width: 359px;
+  height: 359px;
+  background: url("../images/yellow.png") no-repeat center center;
+  background-size: contain;
+  top: 50%;
+  left: 15%;
+  -webkit-animation: moon 25s infinite linear forwards;
+          animation: moon 25s infinite linear forwards; }
+
+/* line 74, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+.parallax .blue-planet {
+  width: 163px;
+  height: 163px;
+  background: url("../images/blue.png") no-repeat center center;
+  background-size: contain;
+  top: 40%;
+  right: 0%;
+  -webkit-animation: dark 10s infinite linear forwards;
+          animation: dark 10s infinite linear forwards; }
+
+/* line 86, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+.parallax .dark-planet {
+  width: 75px;
+  height: 95px;
+  background: url("../images/dark.png") no-repeat center center;
+  background-size: contain;
+  top: 50%;
+  left: 0;
+  -webkit-animation: dark 25s infinite linear forwards;
+          animation: dark 25s infinite linear forwards; }
+
+/* line 98, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+.parallax .stars {
+  height: 110%;
+  width: 110%;
+  background: url("../images/stars.png") no-repeat center center;
+  background-size: contain;
+  top: -3%;
+  left: -4%;
+  -webkit-animation: dark 25s infinite linear forwards;
+          animation: dark 25s infinite linear forwards; }
+
+/* line 110, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+.parallax .big-stars {
+  height: 100%;
+  width: 100%;
+  background: url("../images/big-stars.png") no-repeat center center;
+  background-size: contain;
+  top: -10%;
+  left: 5%;
+  -webkit-animation: dark 25s infinite linear forwards;
+          animation: dark 25s infinite linear forwards; }
+
+/* line 124, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+.header {
+  padding: 22px 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 12px;
+  font-weight: bold; }
+  /* line 134, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  .header .nav {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 47%;
+        -ms-flex: 0 0 47%;
+            flex: 0 0 47%;
+    font-size: 11px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    /* line 143, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+    .header .nav-item a {
+      color: #fff;
+      opacity: 0.3;
+      text-transform: uppercase;
+      -webkit-transition: opacity 0.1s ease;
+      transition: opacity 0.1s ease;
+      will-change: opacity; }
+      /* line 150, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+      .header .nav-item a:hover {
+        opacity: 0.7; }
+  /* line 156, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  .header .options {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 54%;
+        -ms-flex: 0 0 54%;
+            flex: 0 0 54%;
+    margin-top: 4px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+  /* line 165, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  .header .options-left {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  /* line 172, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  .header .button {
+    background: rgba(255, 255, 255, 0.07);
+    padding: 6px;
+    border-radius: 150px;
+    text-align: center;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.5); }
+  /* line 182, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  .header .button-inner {
+    background: #ffd388;
+    border-radius: 150px;
+    padding: 9px 0 8px;
+    width: 100px; }
+  /* line 189, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  .header .free-satoshi .button-inner {
+    background: #20ffae;
+    width: 126px; }
+  /* line 194, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  .header .balance {
+    color: #fff;
+    margin-right: 20px; }
+  /* line 199, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  .header .free-satoshi {
+    margin-right: 10px; }
+  /* line 203, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  .header .withdraw {
+    margin-top: 8px; }
+
+/* line 5, /Users/tumasov/Developer/bitcoinzebra/app/styles/layout.scss */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+/* line 9, /Users/tumasov/Developer/bitcoinzebra/app/styles/layout.scss */
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Gotham Rounded', sans-serif; }
+
+/* line 14, /Users/tumasov/Developer/bitcoinzebra/app/styles/layout.scss */
+a {
+  text-decoration: none; }
+
+/* line 18, /Users/tumasov/Developer/bitcoinzebra/app/styles/layout.scss */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+/* line 24, /Users/tumasov/Developer/bitcoinzebra/app/styles/layout.scss */
+textarea {
+  line-height: 1.6;
+  resize: vertical; }
+
+/* line 29, /Users/tumasov/Developer/bitcoinzebra/app/styles/layout.scss */
+p {
+  color: inherit; }
+
+/* line 33, /Users/tumasov/Developer/bitcoinzebra/app/styles/layout.scss */
+a {
+  outline: none; }
+
+/* line 37, /Users/tumasov/Developer/bitcoinzebra/app/styles/layout.scss */
+.container {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 30px;
+  min-height: 100%;
+  overflow: hidden;
+  max-width: 1260px;
+  width: 100%;
+  text-align: left; }
+
+/* line 48, /Users/tumasov/Developer/bitcoinzebra/app/styles/layout.scss */
+#start,
+#release {
+  padding: 50px 0; }
+
+/* line 54, /Users/tumasov/Developer/bitcoinzebra/app/styles/layout.scss */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */ }
+
+/* line 61, /Users/tumasov/Developer/bitcoinzebra/app/styles/layout.scss */
+input[type=checkbox],
+input[type=radio] {
+  opacity: 0;
+  position: absolute;
+  z-index: 12;
+  width: 18px;
+  height: 18px;
+  cursor: pointer; }
+
+/* line 71, /Users/tumasov/Developer/bitcoinzebra/app/styles/layout.scss */
+input[type=checkbox]:checked,
+input[type=radio]:checked,
+input[type=checkbox]:focus,
+input[type=radio]:focus {
+  outline: none !important; }
+
+/* line 78, /Users/tumasov/Developer/bitcoinzebra/app/styles/layout.scss */
+input[type=checkbox] + .lbl,
+input[type=radio] + .lbl {
+  position: relative;
+  z-index: 11;
+  display: inline-block;
+  margin: 0;
+  line-height: 20px;
+  min-height: 14px;
+  min-width: 14px;
+  font-weight: normal; }
+
+/* line 90, /Users/tumasov/Developer/bitcoinzebra/app/styles/layout.scss */
+input[type=checkbox] + .lbl::before,
+input[type=radio] + .lbl::before {
+  font-weight: normal;
+  font-size: 11px;
+  color: #2091cf;
+  content: "\a0";
+  background-color: #FAFAFA;
+  border: 1px #fff solid;
+  border-radius: 0;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  height: 13px;
+  line-height: 13px;
+  min-width: 13px;
+  margin-top: -5px;
+  margin-right: 8px; }
+
+/* line 109, /Users/tumasov/Developer/bitcoinzebra/app/styles/layout.scss */
+input[type=checkbox]:checked + .lbl::before,
+input[type=radio]:checked + .lbl::before {
+  display: inline-block;
+  content: '✓';
+  background-color: #F5F8FC;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1); }
+
+/* line 117, /Users/tumasov/Developer/bitcoinzebra/app/styles/layout.scss */
+input[type=radio] + .lbl::before {
+  border-radius: 32px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 39px;
+  min-width: 14px; }
+
+/* line 124, /Users/tumasov/Developer/bitcoinzebra/app/styles/layout.scss */
+input[type=radio] + .lbl::before {
+  height: 8px;
+  width: 8px;
+  min-width: auto;
+  margin-right: 7px;
+  border: 4px #fff solid; }
+
+/* line 132, /Users/tumasov/Developer/bitcoinzebra/app/styles/layout.scss */
+input[type=radio]:checked + .lbl::before {
+  background: #3498db;
+  content: ''; }
+
+
+/*# sourceMappingURL=app.css.map*/
