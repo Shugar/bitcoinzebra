@@ -1,6 +1,8 @@
 .wrapper {
   overflow: hidden;
 
+  font-weight: bold;
+
   height: 100vh;
   width: 100vw;
 
@@ -43,6 +45,13 @@
 }
 
 .parallax {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
   & > * {
     position: absolute;
   }
@@ -56,10 +65,11 @@
     top: 15%;
     left: 64%;
 
-    animation: moon 40s infinite linear forwards;
+    animation: moon 25s infinite linear forwards;
   }
 
   .yellow-planet {
+    z-index: 1;
     width: 359px;
     height: 359px;
     background: url('../images/yellow.png') no-repeat center center;
@@ -68,10 +78,11 @@
     top: 50%;
     left: 15%;
 
-    animation: moon 25s infinite linear forwards;
+    animation: moon 15s infinite linear forwards;
   }
 
   .blue-planet {
+    z-index: 1;
     width: 163px;
     height: 163px;
     background: url('../images/blue.png') no-repeat center center;
@@ -84,6 +95,7 @@
   }
 
   .dark-planet {
+    z-index: 1;
     width: 75px;
     height: 95px;
     background: url('../images/dark.png') no-repeat center center;
@@ -92,7 +104,7 @@
     top: 50%;
     left: 0;
 
-    animation: dark 25s infinite linear forwards;
+    animation: dark 15s infinite linear forwards;
   }
 
   .stars {
@@ -104,7 +116,7 @@
     top: -3%;
     left: -4%;
 
-    animation: dark 25s infinite linear forwards;
+    animation: dark 15s infinite linear forwards;
   }
 
   .big-stars {
@@ -115,21 +127,22 @@
 
     top: -10%;
     left: 5%;
-    
-    animation: dark 25s infinite linear forwards;
+
+    animation: dark 15s infinite linear forwards;
   }
 }
 
 
 .header {
+  position: relative;
+  z-index: 2;
+
   padding: 22px 0;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: flex-start;
   font-size: 12px;
-
-  font-weight: bold;
 
   .nav {
     flex: 0 0 47%;
@@ -184,6 +197,30 @@
     border-radius: 150px;
     padding: 9px 0 8px;
     width: 100px;
+
+    position: relative;
+
+    &:before,
+    &:after {
+      display: block;
+      content: '';
+      position: absolute;
+      height: 3px;
+      border-radius: 5px;
+      background: #fff;
+      opacity: 0.3;
+      top: 10%;
+    }
+
+    &:before {
+      left: 17%;
+      width: 48%;
+    }
+
+    &:after {
+      right: 17%;
+      width: 12%;
+    }
   }
 
   .free-satoshi .button-inner {
@@ -203,4 +240,237 @@
   .withdraw {
     margin-top: 8px;
   }
+}
+
+.center {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  .round {
+    background: rgba(255,255,255,0.1);
+    padding: 50px;
+    border-radius: 100%;
+  }
+
+  .value {
+    font-size: 65px;
+    color: #fff;
+  }
+
+  .roll {
+    margin-top: 20px;
+    color: #fff;
+    font-size: 9px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.2);
+  }
+
+  .button {
+    margin-top: 6px;
+    background: #fff;
+    padding: 6px 34px;
+    border-radius: 150px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+
+    &:before,
+    &:after {
+      content: '';
+      height: 33px;
+      width: 20px;
+      background: #dadcdf;
+
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+
+      border-radius: 5px;
+    }
+
+    &:before {
+      left: -12px;
+    }
+
+    &:after {
+      right: -12px;
+    }
+  }
+
+  .button-inner {
+    background: #d2e9ec;
+    border-radius: 150px;
+    padding: 6px 15px 2px;
+
+    color: #ff217c;
+    font-size: 23px;
+  }
+}
+
+.table {
+  margin-top: 45px;
+
+  position: relative;
+  z-index: 2;
+  background: #40394f;
+  padding: 10px 46px;
+  border-radius: 30px;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  &-header {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+
+  .controls {
+    display: flex;
+    flex-flow: row nowrap;
+
+    position: absolute;
+    left: 5%;
+    top: 25px;
+
+    .left,
+    .center,
+    .right {
+      height: 6px;
+      width: 6px;
+      border-radius: 100%;
+      margin: 0 6px;
+    }
+
+    .left {
+      background: #52c3c3;
+    }
+
+    .center {
+      background: #ffb382;
+    }
+
+    .right {
+      background: #1dda70;
+    }
+  }
+
+  .options {
+    display: flex;
+    flex-flow: row nowrap;
+
+    .button {
+      margin: 0 9px;
+    }
+  }
+
+  .button {
+    background: rgba(255,255,255,0.04);
+    padding: 5px;
+    border-radius: 150px;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    min-width: 90px;
+  }
+
+  .button-inner {
+    background: #29272d;
+    border-radius: 150px;
+    padding: 7px 15px 6px;
+
+    position: relative;
+
+    font-size: 11px;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .button-active .button-inner {
+    background: #2ce07a;
+
+    color: #fff;
+
+    &:before,
+    &:after {
+      display: block;
+      content: '';
+      position: absolute;
+      height: 3px;
+      border-radius: 5px;
+      background: #fff;
+      opacity: 0.3;
+      top: 10%;
+    }
+
+    &:before {
+      left: 17%;
+      width: 48%;
+    }
+
+    &:after {
+      right: 17%;
+      width: 12%;
+    }
+  }
+
+
+  &-list {
+    padding: 0 20px;
+    font-size: 12px;
+    margin-top: 10px;
+    width: 100%;
+
+    background: #29272d;
+    border: 4px rgba(4,4,4,0.07) solid;
+    border-radius: 20px;
+
+    display: flex;
+    flex-flow: column nowrap;
+
+    color: #cdcdcd;
+  }
+
+  &-head {
+    font-size: 11px;
+    color: #1dda70;
+    padding: 10px 0;
+    border-bottom: 2px #1dda70 solid;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  &-head &-td {
+    margin: 0;
+  }
+
+  &-listItem {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    text-align: left;
+  }
+
+  &-td {
+    flex: 0 0 14.2%;
+    margin-bottom: 20px;
+
+    &:first-child {
+      color: #2ce07a;
+      padding-left: 15px;
+    }
+  }
+
+  &-td.lose {
+    color: #da0f7a;
+  }
+
+  &-td.win {
+    color: #2ce07a;
+  }
+
 }

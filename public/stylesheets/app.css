@@ -372,6 +372,7 @@ table {
 /* line 1, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
 .wrapper {
   overflow: hidden;
+  font-weight: bold;
   height: 100vh;
   width: 100vw;
   background: url("../images/bg.png") no-repeat center center;
@@ -421,78 +422,85 @@ table {
     -webkit-transform: translate(0);
             transform: translate(0); } }
 
-/* line 46, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
-.parallax > * {
-  position: absolute; }
-
-/* line 50, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
-.parallax .moon {
-  width: 102px;
-  height: 102px;
-  background: url("../images/moon.png") no-repeat center center;
-  background-size: contain;
-  top: 15%;
-  left: 64%;
-  -webkit-animation: moon 40s infinite linear forwards;
-          animation: moon 40s infinite linear forwards; }
-
-/* line 62, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
-.parallax .yellow-planet {
-  width: 359px;
-  height: 359px;
-  background: url("../images/yellow.png") no-repeat center center;
-  background-size: contain;
-  top: 50%;
-  left: 15%;
-  -webkit-animation: moon 25s infinite linear forwards;
-          animation: moon 25s infinite linear forwards; }
-
-/* line 74, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
-.parallax .blue-planet {
-  width: 163px;
-  height: 163px;
-  background: url("../images/blue.png") no-repeat center center;
-  background-size: contain;
-  top: 40%;
-  right: 0%;
-  -webkit-animation: dark 10s infinite linear forwards;
-          animation: dark 10s infinite linear forwards; }
-
-/* line 86, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
-.parallax .dark-planet {
-  width: 75px;
-  height: 95px;
-  background: url("../images/dark.png") no-repeat center center;
-  background-size: contain;
-  top: 50%;
+/* line 47, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+.parallax {
+  overflow: hidden;
+  position: absolute;
   left: 0;
-  -webkit-animation: dark 25s infinite linear forwards;
-          animation: dark 25s infinite linear forwards; }
-
-/* line 98, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
-.parallax .stars {
-  height: 110%;
-  width: 110%;
-  background: url("../images/stars.png") no-repeat center center;
-  background-size: contain;
-  top: -3%;
-  left: -4%;
-  -webkit-animation: dark 25s infinite linear forwards;
-          animation: dark 25s infinite linear forwards; }
-
-/* line 110, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
-.parallax .big-stars {
-  height: 100%;
+  top: 0;
   width: 100%;
-  background: url("../images/big-stars.png") no-repeat center center;
-  background-size: contain;
-  top: -10%;
-  left: 5%;
-  -webkit-animation: dark 25s infinite linear forwards;
-          animation: dark 25s infinite linear forwards; }
+  height: 100%; }
+  /* line 55, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  .parallax > * {
+    position: absolute; }
+  /* line 59, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  .parallax .moon {
+    width: 102px;
+    height: 102px;
+    background: url("../images/moon.png") no-repeat center center;
+    background-size: contain;
+    top: 15%;
+    left: 64%;
+    -webkit-animation: moon 25s infinite linear forwards;
+            animation: moon 25s infinite linear forwards; }
+  /* line 71, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  .parallax .yellow-planet {
+    z-index: 1;
+    width: 359px;
+    height: 359px;
+    background: url("../images/yellow.png") no-repeat center center;
+    background-size: contain;
+    top: 50%;
+    left: 15%;
+    -webkit-animation: moon 15s infinite linear forwards;
+            animation: moon 15s infinite linear forwards; }
+  /* line 84, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  .parallax .blue-planet {
+    z-index: 1;
+    width: 163px;
+    height: 163px;
+    background: url("../images/blue.png") no-repeat center center;
+    background-size: contain;
+    top: 40%;
+    right: 0%;
+    -webkit-animation: dark 10s infinite linear forwards;
+            animation: dark 10s infinite linear forwards; }
+  /* line 97, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  .parallax .dark-planet {
+    z-index: 1;
+    width: 75px;
+    height: 95px;
+    background: url("../images/dark.png") no-repeat center center;
+    background-size: contain;
+    top: 50%;
+    left: 0;
+    -webkit-animation: dark 15s infinite linear forwards;
+            animation: dark 15s infinite linear forwards; }
+  /* line 110, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  .parallax .stars {
+    height: 110%;
+    width: 110%;
+    background: url("../images/stars.png") no-repeat center center;
+    background-size: contain;
+    top: -3%;
+    left: -4%;
+    -webkit-animation: dark 15s infinite linear forwards;
+            animation: dark 15s infinite linear forwards; }
+  /* line 122, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  .parallax .big-stars {
+    height: 100%;
+    width: 100%;
+    background: url("../images/big-stars.png") no-repeat center center;
+    background-size: contain;
+    top: -10%;
+    left: 5%;
+    -webkit-animation: dark 15s infinite linear forwards;
+            animation: dark 15s infinite linear forwards; }
 
-/* line 124, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+/* line 136, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
 .header {
+  position: relative;
+  z-index: 2;
   padding: 22px 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -509,9 +517,8 @@ table {
   -webkit-align-items: flex-start;
       -ms-flex-align: start;
           align-items: flex-start;
-  font-size: 12px;
-  font-weight: bold; }
-  /* line 134, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  font-size: 12px; }
+  /* line 147, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
   .header .nav {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 47%;
@@ -533,7 +540,7 @@ table {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center; }
-    /* line 143, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+    /* line 156, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
     .header .nav-item a {
       color: #fff;
       opacity: 0.3;
@@ -541,10 +548,10 @@ table {
       -webkit-transition: opacity 0.1s ease;
       transition: opacity 0.1s ease;
       will-change: opacity; }
-      /* line 150, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+      /* line 163, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
       .header .nav-item a:hover {
         opacity: 0.7; }
-  /* line 156, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  /* line 169, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
   .header .options {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 54%;
@@ -566,7 +573,7 @@ table {
     -webkit-align-items: flex-start;
         -ms-flex-align: start;
             align-items: flex-start; }
-  /* line 165, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  /* line 178, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
   .header .options-left {
     display: -webkit-box;
     display: -webkit-flex;
@@ -582,7 +589,7 @@ table {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center; }
-  /* line 172, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  /* line 185, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
   .header .button {
     background: rgba(255, 255, 255, 0.07);
     padding: 6px;
@@ -590,26 +597,289 @@ table {
     text-align: center;
     cursor: pointer;
     color: rgba(0, 0, 0, 0.5); }
-  /* line 182, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  /* line 195, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
   .header .button-inner {
     background: #ffd388;
     border-radius: 150px;
     padding: 9px 0 8px;
-    width: 100px; }
-  /* line 189, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+    width: 100px;
+    position: relative; }
+    /* line 203, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+    .header .button-inner:before, .header .button-inner:after {
+      display: block;
+      content: '';
+      position: absolute;
+      height: 3px;
+      border-radius: 5px;
+      background: #fff;
+      opacity: 0.3;
+      top: 10%; }
+    /* line 215, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+    .header .button-inner:before {
+      left: 17%;
+      width: 48%; }
+    /* line 220, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+    .header .button-inner:after {
+      right: 17%;
+      width: 12%; }
+  /* line 226, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
   .header .free-satoshi .button-inner {
     background: #20ffae;
     width: 126px; }
-  /* line 194, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  /* line 231, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
   .header .balance {
     color: #fff;
     margin-right: 20px; }
-  /* line 199, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  /* line 236, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
   .header .free-satoshi {
     margin-right: 10px; }
-  /* line 203, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  /* line 240, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
   .header .withdraw {
     margin-top: 8px; }
+
+/* line 245, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+.center {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  /* line 250, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  .center .round {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 50px;
+    border-radius: 100%; }
+  /* line 256, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  .center .value {
+    font-size: 65px;
+    color: #fff; }
+  /* line 261, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  .center .roll {
+    margin-top: 20px;
+    color: #fff;
+    font-size: 9px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.2); }
+  /* line 269, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  .center .button {
+    margin-top: 6px;
+    background: #fff;
+    padding: 6px 34px;
+    border-radius: 150px;
+    text-align: center;
+    cursor: pointer;
+    position: relative; }
+    /* line 278, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+    .center .button:before, .center .button:after {
+      content: '';
+      height: 33px;
+      width: 20px;
+      background: #dadcdf;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%);
+      border-radius: 5px; }
+    /* line 292, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+    .center .button:before {
+      left: -12px; }
+    /* line 296, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+    .center .button:after {
+      right: -12px; }
+  /* line 301, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  .center .button-inner {
+    background: #d2e9ec;
+    border-radius: 150px;
+    padding: 6px 15px 2px;
+    color: #ff217c;
+    font-size: 23px; }
+
+/* line 311, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+.table {
+  margin-top: 45px;
+  position: relative;
+  z-index: 2;
+  background: #40394f;
+  padding: 10px 46px;
+  border-radius: 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  /* line 325, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  .table-header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  /* line 331, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  .table .controls {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    position: absolute;
+    left: 5%;
+    top: 25px; }
+    /* line 339, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+    .table .controls .left,
+    .table .controls .center,
+    .table .controls .right {
+      height: 6px;
+      width: 6px;
+      border-radius: 100%;
+      margin: 0 6px; }
+    /* line 348, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+    .table .controls .left {
+      background: #52c3c3; }
+    /* line 352, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+    .table .controls .center {
+      background: #ffb382; }
+    /* line 356, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+    .table .controls .right {
+      background: #1dda70; }
+  /* line 361, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  .table .options {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap; }
+    /* line 365, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+    .table .options .button {
+      margin: 0 9px; }
+  /* line 370, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  .table .button {
+    background: rgba(255, 255, 255, 0.04);
+    padding: 5px;
+    border-radius: 150px;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    min-width: 90px; }
+  /* line 380, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  .table .button-inner {
+    background: #29272d;
+    border-radius: 150px;
+    padding: 7px 15px 6px;
+    position: relative;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.5); }
+  /* line 391, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  .table .button-active .button-inner {
+    background: #2ce07a;
+    color: #fff; }
+    /* line 396, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+    .table .button-active .button-inner:before, .table .button-active .button-inner:after {
+      display: block;
+      content: '';
+      position: absolute;
+      height: 3px;
+      border-radius: 5px;
+      background: #fff;
+      opacity: 0.3;
+      top: 10%; }
+    /* line 408, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+    .table .button-active .button-inner:before {
+      left: 17%;
+      width: 48%; }
+    /* line 413, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+    .table .button-active .button-inner:after {
+      right: 17%;
+      width: 12%; }
+  /* line 420, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  .table-list {
+    padding: 0 20px;
+    font-size: 12px;
+    margin-top: 10px;
+    width: 100%;
+    background: #29272d;
+    border: 4px rgba(4, 4, 4, 0.07) solid;
+    border-radius: 20px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    color: #cdcdcd; }
+  /* line 436, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  .table-head {
+    font-size: 11px;
+    color: #1dda70;
+    padding: 10px 0;
+    border-bottom: 2px #1dda70 solid;
+    text-transform: uppercase;
+    margin-bottom: 20px; }
+  /* line 445, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  .table-head .table-td {
+    margin: 0; }
+  /* line 449, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  .table-listItem {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: left; }
+  /* line 458, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  .table-td {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 14.2%;
+        -ms-flex: 0 0 14.2%;
+            flex: 0 0 14.2%;
+    margin-bottom: 20px; }
+    /* line 462, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+    .table-td:first-child {
+      color: #2ce07a;
+      padding-left: 15px; }
+  /* line 468, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  .table-td.lose {
+    color: #da0f7a; }
+  /* line 472, /Users/tumasov/Developer/bitcoinzebra/app/styles/_index.scss */
+  .table-td.win {
+    color: #2ce07a; }
 
 /* line 5, /Users/tumasov/Developer/bitcoinzebra/app/styles/layout.scss */
 * {
