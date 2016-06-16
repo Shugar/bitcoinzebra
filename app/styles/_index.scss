@@ -1,5 +1,5 @@
 .wrapper {
-  overflow: hidden;
+  overflow-x: hidden;
 
   font-weight: bold;
 
@@ -249,21 +249,82 @@
 
   .round {
     background: rgba(255,255,255,0.1);
-    padding: 50px;
     border-radius: 100%;
+    padding: 12px;
+    position: relative;
+  }
+
+  .round.win {
+    .planet {
+      background: url('../images/win.png') no-repeat center center;
+      background-size: contain;
+    }
+
+    .value {
+      box-shadow: 0px 0px 100px 0px rgba(32,255,177,1);
+    }
+  }
+
+  .round.lose {
+    .planet {
+      background: url('../images/lose.png') no-repeat center center;
+      background-size: contain;
+    }
+
+    .value {
+      box-shadow: 0px 0px 100px 0px rgba(225,18,122,1);
+    }
+  }
+
+  .planet {
+    background: url('../images/lose.png') no-repeat center center;
+    background-size: contain;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+    height: 90%;
   }
 
   .value {
     font-size: 65px;
+    border-radius: 100%;
+    padding: 52px;
+    overflow: hidden;
+    position: relative;
     color: #fff;
   }
 
-  .roll {
+  .role {
     margin-top: 20px;
     color: #fff;
     font-size: 9px;
     text-transform: uppercase;
     color: rgba(255,255,255,0.2);
+
+    text-align: center;
+    position: relative;
+  }
+
+  .antenna {
+    width: 3px;
+    background: #dadbdf;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+  }
+
+  .antenna-head {
+    width: 10px;
+    height: 10px;
+    background: #feae82;
+    border-radius: 100%;
+    position: absolute;
+    top: -10px;
+    left: -3px;
   }
 
   .button {
@@ -296,15 +357,35 @@
     &:after {
       right: -12px;
     }
+
+    &-inner {
+      background: #d2e9ec;
+      border-radius: 150px;
+      padding: 6px 15px 2px;
+
+      color: #375b78;
+      font-size: 23px;
+    }
   }
 
-  .button-inner {
-    background: #d2e9ec;
-    border-radius: 150px;
-    padding: 6px 15px 2px;
+  .role.lose {
+    .antenna-head {
+      background: #fe217c;
+    }
 
-    color: #ff217c;
-    font-size: 23px;
+    .button-inner {
+      color: #fe217c;
+    }
+  }
+
+  .role.win {
+    .antenna-head {
+      background: #1ce39b;
+    }
+
+    .button-inner {
+      color: #1ce39b;
+    }
   }
 }
 
@@ -314,8 +395,11 @@
   position: relative;
   z-index: 2;
   background: #40394f;
-  padding: 10px 46px;
+  padding: 10px 46px 0;
   border-radius: 30px;
+
+  border-bottom-left-radius: initial;
+  border-bottom-right-radius: initial;
 
   display: flex;
   flex-flow: column nowrap;
@@ -427,6 +511,9 @@
     border: 4px rgba(4,4,4,0.07) solid;
     border-radius: 20px;
 
+    border-bottom-left-radius: initial;
+    border-bottom-right-radius: initial;
+
     display: flex;
     flex-flow: column nowrap;
 
@@ -473,4 +560,151 @@
     color: #2ce07a;
   }
 
+}
+
+
+.game {
+  background: url('../images/game-bg.png') no-repeat center center;
+  background-size: cover;
+  min-height: 297px;
+
+  color: #61d3cb;
+  z-index: 10;
+
+  position: absolute;
+  min-width: 430px;
+  max-width: 430px;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  .groups {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+
+    .left-top,
+    .right-top,
+    .left-bottom,
+    .right-bottom {
+      position: absolute;
+      width: 62px;
+      height: 52px;
+    }
+
+    .left-top {
+      background: url('../images/left-top.png') no-repeat center center;
+      background-size: contain;
+      top: 30px;
+      left: 20px;
+    }
+
+    .right-top {
+      background: url('../images/right-top.png') no-repeat center center;
+      background-size: contain;
+      top: 30px;
+      right: 20px;
+    }
+
+    .left-bottom {
+      background: url('../images/left-bottom.png') no-repeat center center;
+      background-size: contain;
+      bottom: 30px;
+      left: 20px;
+    }
+
+    .right-bottom {
+      background: url('../images/right-bottom.png') no-repeat center center;
+      background-size: contain;
+      bottom: 30px;
+      right: 20px;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    flex-flow: row nowrap;
+
+    margin-top: 10px;
+  }
+
+  .title {
+    font-size: 11px;
+    text-transform: uppercase;
+  }
+
+  .centered {
+    margin: 0 18px;
+  }
+
+  .button {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .button,
+  .value,
+  .bet {
+    position: relative;
+    padding: 12px 10px 8px;
+    font-size: 15px;
+    text-align: center;
+
+    border: 3px #1e999a solid;
+    border-radius: 10px;
+  }
+
+  .button:after,
+  .value:after,
+  .bet:after {
+    content: '';
+    width: 100%;
+    height: 50%;
+
+    position: absolute;
+    left: -3px;
+    bottom: -3px;
+
+    border: 3px #61d3cb solid;
+    border-top: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .button span {
+    color: #1f999a;
+  }
+
+  .bet {
+    margin-top: 17px;
+    width: 90%;
+    color: #fff;
+  }
+
+  .profit-chance,
+  .prediction {
+    margin-top: 18px;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  .profit-chance {
+    justify-content: center;
+    width: 80%;
+    font-size: 11px;
+    text-transform: uppercase;
+
+    .profit {
+      margin-right: 35px;
+    }
+
+    span {
+      margin-left: 15px;
+      color: #fff;
+    }
+  }
 }
