@@ -44,6 +44,20 @@
   }
 }
 
+// @keyframes comet {
+//   0% {
+//     transform: translate(0,0);
+//   }
+//
+//   50% {
+//     transform: translate(35px, -80px);
+//   }
+//
+//   100% {
+//     transform: translate(0,0);
+//   }
+// }
+
 .parallax {
   overflow: hidden;
   position: absolute;
@@ -54,6 +68,51 @@
 
   & > * {
     position: absolute;
+  }
+
+  .comet-left {
+    width: 141px;
+    height: 82px;
+    background: url('../images/falling-star-left.png') no-repeat center center;
+    background-size: contain;
+
+    top: 37.5%;
+    left: 0%;
+  }
+
+  .comet-right {
+    width: 82px;
+    height: 47px;
+    background: url('../images/falling-star-right.png') no-repeat center center;
+    background-size: contain;
+
+    top: 45%;
+    right: 15%;
+
+    // animation: comet 25s infinite linear forwards;
+  }
+
+  .dark-comet-left {
+    width: 124px;
+    height: 85px;
+    background: url('../images/dark-comet-left.png') no-repeat center center;
+    background-size: contain;
+
+    top: 33%;
+    left: 15%;
+  }
+
+  .dark-comet-right {
+    width: 166px;
+    height: 125px;
+    background: url('../images/dark-comet-right.png') no-repeat center center;
+    background-size: contain;
+
+    top: 58%;
+    z-index: 15;
+    right: 15%;
+
+    // animation: comet 25s infinite linear forwards;
   }
 
   .moon {
@@ -189,6 +248,8 @@
     text-align: center;
     cursor: pointer;
 
+    user-select: none;
+
     color: rgba(0,0,0,0.5);
   }
 
@@ -252,6 +313,8 @@
     border-radius: 100%;
     padding: 12px;
     position: relative;
+
+    box-shadow: 0px 0px 100px 0px rgba(225,18,122,1);
   }
 
   .round.win {
@@ -291,7 +354,7 @@
   .value {
     font-size: 65px;
     border-radius: 100%;
-    padding: 52px;
+    padding: 42px;
     overflow: hidden;
     position: relative;
     color: #fff;
@@ -335,6 +398,8 @@
     text-align: center;
     cursor: pointer;
     position: relative;
+
+    user-select: none;
 
     &:before,
     &:after {
@@ -390,7 +455,7 @@
 }
 
 .table {
-  margin-top: 45px;
+  margin-top: 90px;
 
   position: relative;
   z-index: 2;
@@ -459,6 +524,8 @@
     cursor: pointer;
     text-transform: uppercase;
     min-width: 90px;
+
+    user-select: none;
   }
 
   .button-inner {
@@ -685,6 +752,10 @@
     color: #fff;
   }
 
+  .value {
+    color: #fff;
+  }
+
   .profit-chance,
   .prediction {
     margin-top: 18px;
@@ -705,6 +776,7 @@
     span {
       margin-left: 15px;
       color: #fff;
+      font-weight: 500;
     }
   }
 }
